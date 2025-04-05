@@ -33,14 +33,14 @@ export class PipesComponent {
 
 
   ordiNum:number=0;
-  birthDate=new Date('2000-11-14');
+  birthDate:string="";
 
   searchTerm: string = '';
   employees = [
-    { id: 1, name: 'Rohan', birthDate: new Date(2000, 11, 14), gender: 'Male', position: 'Developer' },
-    { id: 2, name: 'Ram', birthDate: new Date(1998, 3, 22), gender: 'Male', position: 'Designer' },
-    { id: 3, name: 'chanakya', birthDate: new Date(1996, 1, 1), gender: 'Male', position: 'Manager' },
-    { id: 4, name: 'lady', birthDate: new Date(1999, 9, 10), gender: 'Female', position: 'Developer' },
+    { id: 1, name: 'Rohan', gender: 'Male', position: 'Developer' },
+    { id: 2, name: 'Ram',  gender: 'Male', position: 'Designer' },
+    { id: 3, name: 'chanakya',  gender: 'Male', position: 'Manager' },
+    { id: 4, name: 'lady',  gender: 'Female', position: 'Developer' },
 
     
   ];

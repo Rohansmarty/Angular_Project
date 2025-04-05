@@ -7,6 +7,9 @@ import { EmployeeCRUDComponent } from "../employee-crud/employee-crud.component"
 import { PipesComponent } from "../pipes/pipes.component";
 import { ParentComponent } from "../parent/parent.component";
 import { StudentComponent } from '../student/student.component';
+import { EmployeeCRUDParentComponent } from "../employee-crudparent/employee-crudparent.component";
+import { EmployeeTCComponent } from "../employee-tc/employee-tc.component";
+import { HttpEmployeeComponent } from "../http-employee/http-employee.component";
 
 // import { ElectronicsComponent } from "../electronics/electronics.component";
 // import { EssentialsComponent } from "../essentials/essentials.component";
@@ -14,8 +17,12 @@ import { StudentComponent } from '../student/student.component';
 @Component({
   selector: 'app-body',
   imports: [
-    // ParentComponent,
-    PipesComponent
+    //  ProductListComponent
+    // PipesComponent,
+    // ProductListComponent,
+    // EmployeeCRUDParentComponent,
+    // EmployeeTCComponent,
+    HttpEmployeeComponent
 ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

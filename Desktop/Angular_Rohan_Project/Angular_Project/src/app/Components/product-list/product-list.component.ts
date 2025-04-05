@@ -16,7 +16,7 @@ import { faMagnifyingGlassMinus } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProductListComponent {
   products = productsArr;
-  prod: string = ''; // For storing search input
+  prod: string = ''; 
   p:any;
   faMagnifyingGlassMinus=faMagnifyingGlassMinus;
 

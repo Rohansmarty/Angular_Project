@@ -1,4 +1,4 @@
-<h2 class="text-center" ()>Product List</h2>
+<h2 class="text-center">Product List</h2>
 <hr />
 
 <div class="container">
@@ -18,7 +18,7 @@
     </div>
     
     <div class="row mt-2">
-    <!-- Filtered and Sorted Products -->
+   
         @for(product of filteredProducts()| paginate: { itemsPerPage: 4, currentPage: p};track product.id){
        
             

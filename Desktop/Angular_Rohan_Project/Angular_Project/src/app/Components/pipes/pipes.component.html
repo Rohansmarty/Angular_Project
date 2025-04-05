@@ -61,7 +61,7 @@
     <input type="number" [(ngModel)]="ordiNum" placeholder=" Enter a number">
     <h6>after applying ordinal {{ ordiNum | ordinal }}</h6>
 
-    <!-- <input type="Date" [(ngModel)]="birthDate" placeholder=" Enter DOB"> -->
+     <input type="date" [(ngModel)]="birthDate" placeholder=" Enter DOB"> 
     <h6>after calculating age he is {{ birthDate | age }} years old</h6>
 
  </div>
@@ -76,7 +76,7 @@
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Age</th>
+        <!-- <th>Age</th> -->
         <th>Position</th>
       </tr>
     </thead>
@@ -84,7 +84,7 @@
       <tr *ngFor="let employee of employees | search: searchTerm">
         <td>{{ employee.id | ordinal }}</td>
         <td>{{ employee.name | salutation:employee.gender }}</td>
-        <td>{{ employee.birthDate | age }}</td>        
+        <!-- <td>{{ employee.birthDate | age }}</td>         -->
         <td>{{ employee.position }}</td>
       </tr>
     </tbody>
