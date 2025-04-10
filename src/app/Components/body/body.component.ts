@@ -11,6 +11,9 @@ import { EmployeeCRUDParentComponent } from "../employee-crudparent/employee-cru
 import { EmployeeTCComponent } from "../employee-tc/employee-tc.component";
 import { HttpEmployeeComponent } from "../http-employee/http-employee.component";
 import { FolderComponent } from "../folder/folder.component";
+import { ObservableComponent } from "../observable/observable.component";
+import { SubjectDemo2Component } from "../subject-demo2/subject-demo2.component";
+import { TemplateDrivenComponent } from "../template-driven/template-driven.component";
 
 // import { ElectronicsComponent } from "../electronics/electronics.component";
 // import { EssentialsComponent } from "../essentials/essentials.component";
@@ -18,13 +21,8 @@ import { FolderComponent } from "../folder/folder.component";
 @Component({
   selector: 'app-body',
   imports: [
-    //  ProductListComponent
-    // PipesComponent,
-    // ProductListComponent,
-    // EmployeeCRUDParentComponent,
-    // EmployeeTCComponent,
-    // HttpEmployeeComponent,
-    FolderComponent
+   
+    TemplateDrivenComponent
 ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'

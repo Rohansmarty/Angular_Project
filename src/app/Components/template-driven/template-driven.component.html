@@ -1,0 +1,108 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 offset-4 border p-4">
+            <form #myForm="ngForm" (submit)="submitMyForm(myForm.value)">
+                
+                <h4>Registration Form</h4>
+                
+                <p>
+                    First Name*:
+                    <input name="firstName" #fname="ngModel" ngModel required minlength="5" />
+                    <span class="text-danger" *ngIf="fname.hasError('required')"><br>
+                        First Name is required
+                    </span>
+                    <span class="text-danger" *ngIf="fname.hasError('minlength')"><br>
+                        First Name should have a minimum of 5 characters
+                    </span>
+                </p>
+                
+                <p>
+                    Last Name*:
+                    <input name="lastName" #lname="ngModel" ngModel required minlength="5" />
+                    <span class="text-danger" *ngIf="lname.hasError('required')"><br>
+                        Last Name is required
+                    </span>
+                    <span class="text-danger" *ngIf="lname.hasError('minlength')"><br>
+                        Last Name should have a minimum of 5 characters
+                    </span>
+                </p>
+
+                <p>
+                Email*:
+                        <input name="email" #email="ngModel" ngModel required type="email" />
+                        <span class="text-danger" *ngIf="email.hasError('required')"><br>
+                            Email is required
+                        </span>
+                        <span class="text-danger" *ngIf="email.hasError('email')"><br>
+                            Invalid email format
+                        </span>
+                    
+                    
+                </p>
+
+                <p>
+                Date of Birth*:
+                    <input name="dob" ngModel required type="date" />
+                    <span class="text-danger" *ngIf="myForm.controls['dob'].hasError('required')"><br>
+                        Date of Birth is required
+                    </span>
+                </p>
+
+
+                <p>
+                    Gender*:
+                    <input type="radio" name="gender" ngModel value="Male" required /> Male
+                    <input type="radio" name="gender" ngModel value="Female" required /> Female
+                    <span class="text-danger" *ngIf="myForm.controls['gender'].hasError('required')"><br>
+                        Gender is required
+                    </span>
+                </p>
+                
+                <div ngModelGroup="address">
+                    <p>
+                        City:
+                        <input name="city" ngModel />
+                    </p>
+                    <p>
+                        State:
+                        <input name="state" ngModel />
+                    </p>
+                    <p>
+                        Pincode:
+                        <input name="pincode" ngModel type="number"  maxlength="6" />
+                        
+                    </p>
+                </div>
+                
+                <p>
+                    Country:
+                    <select name="country" ngModel>
+                        <option value="USA">United States</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="India">India</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                    </select>
+                </p>
+                <p>
+                    Comments:
+                    <textarea name="comments" #comments="ngModel" ngModel rows="4" cols="50" required></textarea>
+                    <span class="text-danger" *ngIf="comments.hasError('required')"><br>
+                        Comments are required
+                    </span>
+                </p>
+                <p>
+                    <input type="checkbox" name="terms" #terms="ngModel" ngModel required /> I agree to the Terms and Conditions
+                    <span class="text-danger" *ngIf="terms.hasError('required')"><br>
+                        You must agree to the terms and conditions
+                    </span>
+                </p>
+                <input type="submit" value="Submit" class="btn btn-success mx-1" />
+                <input type="reset" value="Clear" class="btn btn-danger mx-1" />
+            </form>
+            
+            <pre>{{myForm.value | json}}</pre>
+        </div>
+    </div>
+</div>
